@@ -48,8 +48,10 @@ body {
   font-family: var(--font-jost);
   margin: 0;
   padding: 0;
+&[data-theme=dark]{
   color: var(--color-dark-500);
 
+}
   display: flex;
   flex-flow: column;
 }
