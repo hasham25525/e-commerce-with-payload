@@ -1,25 +1,24 @@
 'use client'
 
-import { ReactNode, createContext, useContext, useState } from 'react'
+import { createContext, ReactNode, SetStateAction, useContext, useState } from 'react'
 
-interface IContextType{
-    categoryFilters: string[]   
-    setCategoryFilters: React.Dispatch<React.SetStateAction<string[]>>
-    sort: string
-    setSort: React.Dispatch<React.SetStateAction<string>>
+interface IContextType {
+  categoryFilters: string[]
+  setCategoryFilters: React.Dispatch<SetStateAction<string[]>>
+  sort: string
+  setSort: React.Dispatch<SetStateAction<string>>
 }
 
-
-export const INITAL_FILTER_DATA = {
+export const INITIAL_FILTER_DATA = {
   categoryFilters: [],
   setCategoryFilters: () => [],
   sort: '',
   setSort: () => '',
 }
 
-const FilterContext = createContext<IContextType>(INITAL_FILTER_DATA)
+const FilterContext = createContext<IContextType>(INITIAL_FILTER_DATA)
 
-export const FilterProvider = ({ children }: { children: ReactNode }) => {
+export const FilterProvider = ({ children }: { children: React.ReactNode }) => {
   const [categoryFilters, setCategoryFilters] = useState([])
   const [sort, setSort] = useState('-createdAt')
 
