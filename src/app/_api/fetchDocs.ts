@@ -21,10 +21,10 @@ const queryMap = {
     query: ORDERS,
     key: 'Orders',
   },
-  categories :{
-    query : CATEGORIES,
-    key : 'Categories',
-  }
+  categories: {
+    query: CATEGORIES,
+    key: 'Categories',
+  },
 }
 
 export const fetchDocs = async <T>(

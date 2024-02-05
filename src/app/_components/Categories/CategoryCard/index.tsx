@@ -11,14 +11,14 @@ type CategoryCardProps = {
 
 const CategoryCard = ({ category }: CategoryCardProps) => {
   const media = category.media as Media
-  const {setCategoryFilters} = useFilter()
+  const { setCategoryFilters } = useFilter()
 
   return (
     <Link
       href="/products"
       className={classes.card}
       style={{ backgroundImage: `url(${media.url})` }}
-      onClick={() => setCategoryFilters( [ category.id ])}
+      onClick={() => setCategoryFilters([category.id])}
     >
       <p className={classes.title}>{category.title}</p>
     </Link>

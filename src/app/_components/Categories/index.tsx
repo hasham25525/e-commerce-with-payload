@@ -5,7 +5,6 @@ import { Category } from '../../../payload/payload-types'
 import CategoryCard from './CategoryCard'
 
 import classes from './index.module.scss'
- 
 
 const Categories = ({ categories }: { categories: Category[] }) => {
   return (
